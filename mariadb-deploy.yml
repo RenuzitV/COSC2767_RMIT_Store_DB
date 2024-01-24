@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mariadb-deploy
-  namespace: store-app
   labels:
     name: mariadb-deploy
     app: demo-store-app
@@ -15,8 +14,7 @@ spec:
     
   template:
     metadata:
-      name: mariadb-pod
-      namespace: store-app
+      name: mariadb-pod      
       labels:
         name: mariadb-pod
         app: demo-store-app
